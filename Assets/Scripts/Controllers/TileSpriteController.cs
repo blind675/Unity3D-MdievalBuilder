@@ -37,7 +37,8 @@ public class TileSpriteController : MonoBehaviour
 
                 SpriteRenderer renderer = tile_go.AddComponent<SpriteRenderer>();
                 renderer.sprite = Random.Range(0,2) == 0 ? grassSprite1 : grassSprite2;
-                renderer.sortingOrder = 0;
+                renderer.sortingLayerName = "Tiles";
+                //renderer.sortingOrder = 0;
             }
         }
 

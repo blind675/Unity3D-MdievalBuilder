@@ -29,6 +29,7 @@ public class JobSpriteController : MonoBehaviour
         SpriteRenderer renderer = job_go.AddComponent<SpriteRenderer>();
         renderer.sprite = installedObjectSpriteController.GetSpriteForInstalledObject(job.jobObjectType);
         renderer.color = new Color(1f,1f,1f,0.5f);
+        renderer.sortingLayerName = "Jobs";
 
         job.RegisterJobCompleteCallback(OnJobEnded);
         job.RegisterJobCancelCallback(OnJobEnded);

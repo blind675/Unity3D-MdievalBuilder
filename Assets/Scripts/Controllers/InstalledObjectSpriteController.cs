@@ -41,7 +41,8 @@ public class InstalledObjectSpriteController : MonoBehaviour
 
         SpriteRenderer renderer = obj_go.AddComponent<SpriteRenderer>();
         renderer.sprite = GetSpriteForInstalledObject(obj);
-        renderer.sortingOrder = 1;
+        renderer.sortingLayerName = "InstalledObjects";
+        //renderer.sortingOrder = 1;
 
         obj.RegisterOnChangedCallback(OnInstalledObjectChanged);
 
